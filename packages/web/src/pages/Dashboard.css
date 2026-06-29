@@ -1,0 +1,345 @@
+.aurora-dashboard {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a0f3a 50%, #0a0e27 100%);
+  color: #fff;
+  gap: 0;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: rgba(10, 14, 39, 0.5);
+  border-right: 1px solid rgba(92, 58, 170, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(92, 58, 170, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.sidebar-logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5C3AAA, #FF1493, #00D9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: rgba(92, 58, 170, 0.1);
+  color: #00D9FF;
+  border-color: rgba(92, 58, 170, 0.2);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(92, 58, 170, 0.2), rgba(255, 20, 147, 0.1));
+  color: #FF1493;
+  border-color: rgba(255, 20, 147, 0.3);
+}
+
+.nav-item span {
+  flex: 1;
+  text-align: left;
+}
+
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(92, 58, 170, 0.2);
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(92, 58, 170, 0.1);
+  border: 1px solid rgba(92, 58, 170, 0.2);
+  border-radius: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FF1493;
+  object-fit: cover;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.verified {
+  display: block;
+  font-size: 11px;
+  color: #00D9FF;
+}
+
+.settings-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.settings-btn:hover {
+  background: rgba(92, 58, 170, 0.2);
+  color: #FF1493;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(255, 20, 147, 0.1));
+  border: 1px solid rgba(255, 20, 147, 0.3);
+  border-radius: 8px;
+  color: #FF1493;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 20, 147, 0.3), rgba(255, 20, 147, 0.2));
+  border-color: rgba(255, 20, 147, 0.5);
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(92, 58, 170, 0.3);
+  border-radius: 4px;
+}
+
+.trending-sidebar {
+  background: rgba(10, 14, 39, 0.5);
+  border-left: 1px solid rgba(92, 58, 170, 0.2);
+  padding: 24px 16px;
+  overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.trending-container,
+.suggested-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(92, 58, 170, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.trending-container h3,
+.suggested-container h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5C3AAA, #FF1493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trending-items,
+.suggested-users {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(92, 58, 170, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trending-item:hover {
+  background: rgba(92, 58, 170, 0.15);
+  transform: translateX(4px);
+}
+
+.trend-rank {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FF1493;
+  min-width: 24px;
+}
+
+.trend-info {
+  flex: 1;
+}
+
+.trend-tag {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.trend-count {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.suggested-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(92, 58, 170, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.suggested-user:hover {
+  background: rgba(92, 58, 170, 0.15);
+}
+
+.suggested-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5C3AAA;
+  object-fit: cover;
+}
+
+.suggested-user > div {
+  flex: 1;
+}
+
+.sugg-username {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.sugg-bio {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.follow-btn {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #5C3AAA, #FF1493);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.follow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .aurora-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .trending-sidebar {
+    display: none;
+  }
+}
