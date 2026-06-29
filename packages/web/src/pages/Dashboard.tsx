@@ -27,15 +27,12 @@ export default function Dashboard() {
 
   return (
     <div className="aurora-dashboard">
-      {/* Sidebar */}
       <aside className="sidebar">
-        {/* Logo */}
         <div className="sidebar-logo">
           <div className="logo-icon">🌌</div>
           <h1>Aurora</h1>
         </div>
 
-        {/* Navigation */}
         <nav className="sidebar-nav">
           <button
             className={`nav-item ${activeTab === 'feed' ? 'active' : ''}`}
@@ -62,7 +59,6 @@ export default function Dashboard() {
           </button>
         </nav>
 
-        {/* User Profile */}
         <div className="sidebar-user">
           <div className="user-card">
             <img
@@ -85,12 +81,10 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="main-content">
         {activeTab === 'feed' && <Feed />}
       </main>
 
-      {/* Right Sidebar - Trending */}
       <aside className="trending-sidebar">
         <div className="trending-container">
           <h3>Trending Now</h3>
@@ -126,7 +120,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Suggested Users */}
         <div className="suggested-container">
           <h3>Suggested for You</h3>
           <div className="suggested-users">
